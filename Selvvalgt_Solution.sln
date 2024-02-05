@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selvvalgt", "Selvvalgt\Selvvalgt.csproj", "{F5750AFF-4942-453E-B880-BDB0FFD83A0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selvvalgt_Test", "Selvvalgt_Test\Selvvalgt_Test.csproj", "{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F5750AFF-4942-453E-B880-BDB0FFD83A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5750AFF-4942-453E-B880-BDB0FFD83A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5750AFF-4942-453E-B880-BDB0FFD83A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
