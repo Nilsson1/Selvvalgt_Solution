@@ -20,7 +20,7 @@ namespace DataAccess
             }
             else
             {
-                builder.DataSource = "..\\home\\site\\wwwroot\\DataAccesss\\SelvvalgtDB.sqlite";
+                builder.DataSource = "D:\\home\\site\\wwwroot\\DataAccess\\SelvvalgtDB.sqlite";
             }
 
             ConnString = builder.ConnectionString;
