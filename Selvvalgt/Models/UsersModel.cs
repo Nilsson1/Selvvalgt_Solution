@@ -2,6 +2,6 @@
 {
     public class UsersModel
     {
-        public List<DataAccess.Users> users = new List<DataAccess.Users>();
+        public List<Users> users = new List<Users>();
     }
 }

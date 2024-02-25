@@ -1,5 +1,4 @@
-﻿using DataAccess;
-using Microsoft.Extensions.FileProviders;
+﻿using Microsoft.Extensions.FileProviders;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,7 +26,7 @@ namespace Selvvalgt
                 env.WebRootFileProvider, new PhysicalFileProvider(Path.Combine(execDirectory))
             );
 
-            DBContext.Initialize(this.Configuration, env);
+            WebAppDBContext.Initialize(this.Configuration, env);
         }
 
         private static string GetExecDirectory()
@@ -48,10 +47,9 @@ namespace Selvvalgt
         public void ConfigureServices(IServiceCollection services)
         {
             // Add services to the container.
-            services.AddDbContext<DBContext>(options =>
+            services.AddDbContext<WebAppDBContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
-                    .UseLazyLoadingProxies(),
-                ServiceLifetime.Scoped);
+                    .UseLazyLoadingProxies());
 
             services.AddControllersWithViews();
             services.AddScoped<UsersRepository>();

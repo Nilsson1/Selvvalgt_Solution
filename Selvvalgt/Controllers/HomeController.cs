@@ -1,4 +1,3 @@
-using DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Selvvalgt.Models;

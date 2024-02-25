@@ -1,4 +1,3 @@
-using DataAccess;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Selvvalgt;
