@@ -10,6 +10,8 @@ namespace DataAccess
 {
     public class DBContext : IdentityDbContext<IdentityUser>
     {
+
+
         public static void Initialize(IConfiguration configuration, IHostEnvironment env)
         {
             //var execDirectory = configuration.GetValue("SELVVALGT_SOLUTION_ROOT", env.ContentRootPath);

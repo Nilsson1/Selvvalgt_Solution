@@ -49,7 +49,7 @@ namespace Selvvalgt
         {
             // Add services to the container.
             services.AddDbContext<DBContext>(options =>
-                options.UseSqlite(DBContext.ConnString)
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
                     .UseLazyLoadingProxies(),
                 ServiceLifetime.Scoped);
 
@@ -70,7 +70,7 @@ namespace Selvvalgt
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
