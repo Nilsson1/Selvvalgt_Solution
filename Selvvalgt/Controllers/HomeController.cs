@@ -1,5 +1,6 @@
 using DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Selvvalgt.Models;
 using System.Diagnostics;
 
@@ -21,6 +22,7 @@ namespace Selvvalgt.Controllers
             var users = _userRepository.GetUsers();
             UsersModel usersModel = new UsersModel();
             usersModel.users = users;
+            _logger.LogError(usersModel.users[0].Username.ToString());
             return View(usersModel);
         }
 
