@@ -1,38 +1,36 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Data.Sqlite;
-using System.IO;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace DataAccess
 {
-    public class SelvvalgtDB : IdentityDbContext<IdentityUser>
+    public class DBContext : IdentityDbContext<IdentityUser>
     {
         public static void Initialize(IConfiguration configuration, IHostEnvironment env)
         {
-            var execDirectory = "Selvvalgt_ROOT";
+            //var execDirectory = configuration.GetValue("SELVVALGT_SOLUTION_ROOT", env.ContentRootPath);
             var builder = new SqliteConnectionStringBuilder();
-            builder.DataSource = Path.Combine(execDirectory, "NORTHWND.sqlite");
+            builder.DataSource = "..\\DataAccess\\SelvvalgtDB.sqlite";
             ConnString = builder.ConnectionString;
             if (string.IsNullOrEmpty(ConnString))
             {
+                throw new Exception("Cannot compute connection string to connect database!");
             }
         }
 
+        public DbSet<Users> Users { get; set; }
+
         public static string? ConnString;
 
-        #pragma warning disable CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
-        public SelvvalgtDB(DbContextOptions<SelvvalgtDB> options)
+        public DBContext(DbContextOptions<DBContext> options)
         #pragma warning restore CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
             : base(options)
-        {
-        }
-
-        public DbSet<UsersDAO> UsersDAO { get; set; }
+                {
+                }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,7 +40,11 @@ namespace DataAccess
             };
 
             base.OnModelCreating(modelBuilder);
+        }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
         }
     }
 }
