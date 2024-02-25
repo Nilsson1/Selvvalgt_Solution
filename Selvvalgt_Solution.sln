@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selvvalgt", "Selvvalgt\Selv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selvvalgt_Test", "Selvvalgt_Test\Selvvalgt_Test.csproj", "{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{80FF5D98-7786-4EE4-AD71-9D31ADF001F8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFB8DB2-84F2-4A85-80B8-BEEECE8332DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80FF5D98-7786-4EE4-AD71-9D31ADF001F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80FF5D98-7786-4EE4-AD71-9D31ADF001F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80FF5D98-7786-4EE4-AD71-9D31ADF001F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80FF5D98-7786-4EE4-AD71-9D31ADF001F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
