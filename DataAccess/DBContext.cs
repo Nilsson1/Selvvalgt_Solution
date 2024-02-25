@@ -14,7 +14,15 @@ namespace DataAccess
         {
             //var execDirectory = configuration.GetValue("SELVVALGT_SOLUTION_ROOT", env.ContentRootPath);
             var builder = new SqliteConnectionStringBuilder();
-            builder.DataSource = "..\\DataAccess\\SelvvalgtDB.sqlite";
+            if (env.IsDevelopment())
+            {
+                builder.DataSource = "..\\DataAccess\\SelvvalgtDB.sqlite";
+            }
+            else
+            {
+                builder.DataSource = "..\\home\\site\\wwwroot\\DataAccesss\\SelvvalgtDB.sqlite";
+            }
+
             ConnString = builder.ConnectionString;
             if (string.IsNullOrEmpty(ConnString))
             {
