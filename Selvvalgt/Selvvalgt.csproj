@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <None Update="Data\WebAppDB.db">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
