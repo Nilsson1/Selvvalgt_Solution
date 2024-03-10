@@ -12,6 +12,8 @@ on:
 jobs:
   call-workflow-codeql:
     uses: ./.github/workflows/codeql.yml
+    secrets: inherit
+
   build:
     runs-on: windows-latest
 
