@@ -11,8 +11,7 @@ on:
 
 jobs:
   call-workflow-codeql:
-    uses: ./workflows/codeql.yml
-
+    uses: ./.github/workflows/codeql.yml
   build:
     runs-on: windows-latest
 
