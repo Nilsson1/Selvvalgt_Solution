@@ -10,6 +10,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  call-workflow-codeql:
+    uses: ./.github/workflows/codeql.yml
+
   build:
     runs-on: windows-latest
 
