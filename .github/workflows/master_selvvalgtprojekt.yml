@@ -12,6 +12,9 @@ on:
 jobs:
   call-workflow-codeql:
     uses: ./.github/workflows/codeql.yml
+    permissions:
+      actions: read
+      security-events: write
     secrets: inherit
 
   build:
