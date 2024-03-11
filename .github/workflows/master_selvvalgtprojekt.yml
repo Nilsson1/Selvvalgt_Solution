@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow-codeql:
+  CodeQL:
     uses: ./.github/workflows/codeql.yml
     permissions:
       actions: read
@@ -19,6 +19,9 @@ jobs:
     secrets: inherit
 
   build:
+    needs:
+     - CodeQL
+
     runs-on: windows-latest
 
     steps:
