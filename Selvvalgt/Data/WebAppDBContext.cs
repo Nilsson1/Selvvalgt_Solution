@@ -31,7 +31,7 @@ namespace Selvvalgt
 
         public DbSet<Users> Users { get; set; }
 
-        public static string? ConnString;
+        public static readonly string? ConnString;
 
         public WebAppDBContext(DbContextOptions<WebAppDBContext> options) : base(options){ }
 
